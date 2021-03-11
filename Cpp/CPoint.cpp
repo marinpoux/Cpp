@@ -8,6 +8,25 @@ void CPoint::afficheLog() const
 	printf("Point en y : %d", n_y);
 }
 
+//constructeur sans paramètres
+CPoint::CPoint()
+{
+	this->n_x = 0;
+	this->n_y = 0;
+}
+
+CPoint::CPoint(int n_x, int n_y)
+{
+	this->n_x = 0;
+	this->n_y = n_y;
+}
+
+CPoint::CPoint(int n_y)
+{
+	this->n_x = 0;
+	this->n_y = n_y;
+}
+
 int CPoint::getX() const
 {
 	return n_x;

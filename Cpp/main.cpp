@@ -10,8 +10,10 @@ int main() {
 	//instance de la classe CPoint
 	CPoint p;
 
-	p.setX(0);
-	p.setY(0);
+	CPoint p1(6, 5);
+
+	//p.setX(0);
+	//p.setY(0);
 
 	printf("X: ");
 	afficheLog(p.getX());
@@ -19,8 +21,8 @@ int main() {
 	printf("Y: ");
 	afficheLog(p.getY());
 	
-	float flt_f = 12.8;
-	afficheLog(flt_f);
+	//float flt_f = 12.8;
+	//afficheLog(flt_f);
 
 	return 0;
 }
