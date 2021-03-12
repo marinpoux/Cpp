@@ -7,13 +7,13 @@ void CPoint::afficheLog() const
 	printf("Point en x : %d", n_x);
 	printf("Point en y : %d", n_y);
 }
-
+/*
 //constructeur sans paramètres
 CPoint::CPoint()
 {
 	this->n_x = 0;
 	this->n_y = 0;
-}
+}*/
 
 CPoint::CPoint(int n_x, int n_y)
 {

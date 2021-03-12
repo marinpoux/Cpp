@@ -1,6 +1,12 @@
-#include "tPoint.h"
 #include "CPoint.h"
 #include <stdio.h>
+#include <iostream>
+
+//main sera soumis à utilisation d'un namespace (std) et donc plus besoin de l'écrire
+using namespace std;
+//la direction des chevrons cin et cout dépend : 'cout <<' ou 'cin >>'
+//envoie flux vers la sortie + oppérateur de concaténation
+//endl <-> \n (end line)
 
 void afficheLog(int n_value);
 void afficheLog(float flt_value);
@@ -29,10 +35,12 @@ int main() {
 
 void afficheLog(int n_value) {
 
-	printf("%d\n", n_value);
+	//std::cout << n_value << std::endl;
+	cout << "log : " << n_value << endl;
 }
 
 void afficheLog(float flt_value) {
 
-	printf("%f\n", flt_value);
+	//std::cout << flt_value << std::endl;
+	cout << "log : " << flt_value << endl;
 }
