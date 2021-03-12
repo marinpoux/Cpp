@@ -17,18 +17,20 @@ int main() {
 	CPoint p;
 
 	CPoint p1(6, 5);
+	int n_x = 0, n_y = 0;
 
-	//p.setX(0);
-	//p.setY(0);
+	cout << "saisir x: " << endl;
+	cin >> n_x;
+	cout << "saisir y: " << endl;
+	cin >> n_y;
 
-	printf("X: ");
+	p.setX(n_x);
+	p.setY(n_y);
+
+	cout << "x: " << endl;
 	afficheLog(p.getX());
-
-	printf("Y: ");
+	cout << "y: " << endl;
 	afficheLog(p.getY());
-	
-	//float flt_f = 12.8;
-	//afficheLog(flt_f);
 
 	return 0;
 }
