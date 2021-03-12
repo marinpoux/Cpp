@@ -17,64 +17,25 @@ void afficheLog(string str_value);
 
 int main() {
 
+	const int TAILLE = 10;
+
 	//instance de la classe CPoint
 	CPoint p;
 
 	CPoint p1(6, 5, "vert");
-	int n_x = 0, n_y = 0;
 
-	cout << "saisir x: " << endl;
-	cin >> n_x;
-	cout << "saisir y: " << endl;
-	cin >> n_y;
+	//tableau de points
+	CPoint tab_point[TAILLE];
 
-	p.setX(n_x);
-	p.setY(n_y);
+	for (int n_i = 0; n_i < TAILLE; n_i++) {
 
-	cout << "x: " << endl;
-	afficheLog(p.getX());
-	cout << "y: " << endl;
-	afficheLog(p.getY());
-	cout << "couleur du point : " << endl;
-	afficheLog(p.getCoul());
+		tab_point[n_i] = p1;
 
-	string str_chaine = p.getCoul();
-	str_chaine = p1.getCoul();
+		afficheLog(tab_point[0].getX());
+		afficheLog(tab_point[0].getY());
+		afficheLog(tab_point[0].getCoul());
 
-	cout << str_chaine[3] << endl;
-	char c_car = str_chaine[0];
-
-	//str_chaine.length();
-	str_chaine.c_str();
-	
-	int n_i = 0;
-	int n_cpt = 0;
-	while (str_chaine[n_i] != '\0') {
-
-		n_cpt = n_i;
-		n_i++;
 	}
-
-	char* ptr_chaine = (char*)malloc(n_cpt + 2 * sizeof(char));
-
-	for (n_i = 0; n_i <= n_cpt + 1; n_i++) {
-
-		if (ptr_chaine) {
-			ptr_chaine[n_i] = str_chaine[n_i];
-		}
-
-		if (n_i == n_cpt + 1)
-			if (ptr_chaine) {
-				ptr_chaine[n_i] = '\0';
-			}
-	}
-
-	free(ptr_chaine);
-
-	//int n_len = strlen(ptr_chaine);
-	int n_len = strlen(str_chaine.c_str());
-
-
 
 
 
