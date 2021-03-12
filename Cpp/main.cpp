@@ -1,6 +1,8 @@
 #include "CPoint.h"
 #include <stdio.h>
 #include <iostream>
+#include <string.h>
+#include <stdlib.h>
 
 
 //main sera soumis à utilisation d'un namespace (std) et donc plus besoin de l'écrire
@@ -41,6 +43,9 @@ int main() {
 
 	cout << str_chaine[3] << endl;
 	char c_car = str_chaine[0];
+
+	//str_chaine.length();
+	str_chaine.c_str();
 	
 	int n_i = 0;
 	int n_cpt = 0;
@@ -49,6 +54,29 @@ int main() {
 		n_cpt = n_i;
 		n_i++;
 	}
+
+	char* ptr_chaine = (char*)malloc(n_cpt + 2 * sizeof(char));
+
+	for (n_i = 0; n_i <= n_cpt + 1; n_i++) {
+
+		if (ptr_chaine) {
+			ptr_chaine[n_i] = str_chaine[n_i];
+		}
+
+		if (n_i == n_cpt + 1)
+			if (ptr_chaine) {
+				ptr_chaine[n_i] = '\0';
+			}
+	}
+
+	free(ptr_chaine);
+
+	//int n_len = strlen(ptr_chaine);
+	int n_len = strlen(str_chaine.c_str());
+
+
+
+
 
 	return 0;
 }
