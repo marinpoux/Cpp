@@ -7,12 +7,13 @@
 using namespace std;
 
 
-
+/*
 void afficheLog(int n_value);
 void afficheLog(float flt_value);
 void afficheLog(string str_value);
 void afficheLog(char* pt_value);
 void modifPoint(CPoint &p);
+*/
 
 int main() {
 
@@ -30,12 +31,12 @@ int main() {
 
 	bool test=p1.coincidePoint(p2);
 	
-	modifPoint(p2);
+	//modifPoint(p2);
 
 	
-	
-	
 
+	p1.afficheLog();
+	
 
 	return 0;
 	

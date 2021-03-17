@@ -85,7 +85,5 @@ bool CPoint::coincidePoint(CPoint &p) const
 		return true;
 	else
 		return false;
-
 }
-
 
