@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include <string.h>
 
 using namespace std;
 
@@ -10,8 +10,13 @@ private :
 	int n_x;
 	int n_y;
 
-	string str_coul;
 	char* pt_coul;
+
+	//static -> d'un appel a l'autre, occuper le meme espace memoire
+	static int n_cpt;
+	//compte nb instances de constructeurs
+
+protected :
 
 public :
 	//fonctions membres
@@ -19,14 +24,20 @@ public :
 
 	//CPoint(int n_x = 0, int n_y = 0, string str_coul = "rouge");
 
+	//constructeurs
 	CPoint();
 	CPoint(int n_x, int n_y, char* pt_coul);
+
+	//destructeurs
+	~CPoint();
 
 	//accesseurs
 	int getX()const;
 	int getY()const;
-	//string getCoul()const;
+	char* getCoul()const;
 	
+	//int getCptInstance()const;
+	static int getCptInstance();
 
 	//mutateurs
 	void setX(int n_x);
