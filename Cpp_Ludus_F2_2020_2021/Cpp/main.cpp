@@ -25,6 +25,20 @@ int main() {
 	CPoint p1(0, 0, pt_couleur);
 	
 	CPoint p2(0, 2, pt_couleur);
+
+
+	//Constructeur de copie
+	//CPoint(&var);
+	CPoint p3(p1);
+
+	CPoint p4 = p2;
+	//!! DIFFERENT DE : "CPoint p4; p4=p2;"
+
+
+
+
+
+
 	
 	//
 	cout << CPoint::getCptInstance() << endl;

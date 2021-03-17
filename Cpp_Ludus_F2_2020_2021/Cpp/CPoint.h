@@ -21,15 +21,20 @@ private :
 
 	static int n_cpt;
 
-
+	//pour empecher copie d'objets de classe, on met constructeur de copie en PRIVE au lieu de public
 
 protected :
 
 public :
 
-	
+	//constructeurs
 	CPoint();
 	CPoint(int n_x, int n_y, char *pt_coul);
+
+	//constructeur de copie
+	CPoint(CPoint& p);
+	
+	//destructeurs
 	~CPoint();
 
 

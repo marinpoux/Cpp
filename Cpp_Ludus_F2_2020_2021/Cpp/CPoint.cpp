@@ -29,6 +29,18 @@ CPoint::CPoint(int n_x, int n_y,char *pt_coul)
 
 }
 
+//constructeur de copie
+CPoint::CPoint(CPoint& p)
+{
+	this->n_x = p.n_x;
+	this->n_y = p.n_y;
+	this->pt_coul = new char[TAILLE];
+	strcpy_s(this->pt_coul, TAILLE, p.getCoul());
+
+	n_cpt++;
+}
+
+//destructeur
 CPoint::~CPoint()
 {
 	std::cout << "Destructeur" << std::endl;
