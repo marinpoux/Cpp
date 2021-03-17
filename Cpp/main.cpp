@@ -19,10 +19,8 @@ int main() {
 
 	const int TAILLE = 10;
 
-	//instance de la classe CPoint
-	CPoint p;
-
-	CPoint p1(6, 5, "vert");
+	char* pt_couleur = new char[TAILLE];
+	strcpy_s();
 
 	//tableau de points
 	CPoint tab_point[TAILLE];
@@ -34,8 +32,28 @@ int main() {
 		afficheLog(tab_point[0].getX());
 		afficheLog(tab_point[0].getY());
 		afficheLog(tab_point[0].getCoul());
-
 	}
+
+	//tableau dynamique de points
+	CPoint* pt_point = new CPoint[TAILLE];	//new remplace malloc en c++
+
+	for (int n_i = 0; n_i < TAILLE; n_i++) {
+
+		pt_point[n_i] = p1;
+
+		afficheLog(pt_point[0].getX());
+		afficheLog(pt_point[0].getY());
+		afficheLog(pt_point[0].getCoul());
+	}
+
+	delete[]pt_point; //supressin du pointeur-tableau
+
+	//pas de [] si pointeur sur une seule valeur
+	int* pt_entier = new int;
+	delete pt_entier;
+
+
+
 
 
 
